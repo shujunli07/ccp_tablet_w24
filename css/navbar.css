@@ -1,0 +1,161 @@
+/* FILEPATH: /c:/Users/shuju/OneDrive/Desktop/SI 539/ccp_starter_code-main/navbar.css */
+.center {
+  text-align: center;
+}
+p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 480px) {
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color:#D7C4BB;
+    margin:0;
+    padding: 5px;
+    line-height: normal;
+  }
+h1{
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  color:rgb(2, 2, 26);
+  font-size: xx-large;
+  margin: 10px;
+}
+  h2{
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  color:rgb(2, 2, 26);
+  font-size: large;
+  margin: 10px, 0px, 10px, 0px;
+
+}
+h3 {
+  font-weight: bold;
+  color:blue;
+  margin: 5px;
+}
+
+header {
+    background-color: #d59019;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust the number 4 for the number of items */
+    grid-gap: 20px; /* Adjust spacing between items */
+    padding: 0;
+    justify-content: center; /* Center the items horizontally */
+  }
+nav ul li {
+    padding: 2px;
+    text-align: center;
+    background-color: bisque;
+  }
+  a:link, a:visited {
+    color: #000;
+  }
+  a.current:link, a.current:visited {
+    color: white;
+    background-color: blue;
+    font-style: italic;
+  }
+  nav ul li a {
+    padding: 5px;
+    display: block;
+  }
+  .skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  
+  .skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    border: dashed 4px #d59019; /* Add a border around the gallery */
+    gap: 10px; /* Adjust the space between items */
+    padding: 10px;
+    background-color: antiquewhite;
+    position: relative;
+  }
+  
+  .photo-gallery img, .photo-gallery video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+  .center-image img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .footer {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 10px;
+    color: blueviolet;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    header, main, .photo-gallery, footer {
+      animation: fadeIn 1s ease-out;
+    }
+  
+    body {
+      padding: 20px; /* Increase body padding for tablet */
+    }
+  
+    h1 {
+      font-size: larger; /* Increase the font size for headings */
+    }
+  
+    nav ul {
+      grid-template-columns: repeat(4, 1fr); /* Ensure nav items are evenly spaced */
+      padding-left: 0;
+    }
+  
+    nav ul li {
+      padding: 10px; /* Increase padding for clickable area */
+    }
+  
+    .nav {
+      display: flex; /* Change the nav display to flex for a more adaptable layout */
+      justify-content: space-around; /* Space items nicely */
+      align-items: center; /* Center items vertically */
+    }
+  
+    .photo-gallery {
+      grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns for tablet */
+      gap: 15px; /* Increase the gap for better spacing */
+    }
+  
+    .footer {
+      padding: 20px; /* Increase footer padding */
+    }
+  }
